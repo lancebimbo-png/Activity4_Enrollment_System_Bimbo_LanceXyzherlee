@@ -24,3 +24,6 @@ This is a Java Swing application that implements a Simple Student Enrollment Sys
 3. Ensure the MySQL JDBC Driver is added to your project's Libraries.
 4. Run your local MySQL server (via XAMPP or MySQL Workbench).
 5. Run the main Java file to launch the application GUI.
+
+## ERD
+<img width="621" height="299" alt="ERD_Diagram drawio" src="https://github.com/user-attachments/assets/9662a97d-9e87-40b0-8bf3-d8e048084482" />
