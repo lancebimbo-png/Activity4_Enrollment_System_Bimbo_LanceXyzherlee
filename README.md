@@ -9,7 +9,7 @@ This is a Java Swing application that implements a Simple Student Enrollment Sys
 * **ERD Diagram:** `ERD_Diagram.png` - Visual map of the database tables and their One-to-Many relationships.
 
 ## How to Set Up the MySQL Database
-1. Open your MySQL management tool (e.g., phpMyAdmin or MySQL Workbench).
+1. Open your MySQL management tool
 2. Create a new database named `activity4_enrollment_db`.
 3. Import the provided `activity4_enrollment_db.sql` file into this new database to automatically build the `Student`, `Course`, and `Enrolled Subject` tables.
 
