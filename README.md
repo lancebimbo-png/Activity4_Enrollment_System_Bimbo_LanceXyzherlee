@@ -1,29 +1,38 @@
-# Simple Student Enrollment System (CRUD)
+# Student Enrollment System (Java Swing CRUD)
 
-## Project Description
-This is a Java Swing application that implements a Simple Student Enrollment System. It connects to a MySQL database to perform Create, Read, Update, and Delete (CRUD) operations for Students, Courses, and Enrolled Subjects.
+## Overview
+This is a desktop-based Student Enrollment System developed using Java Swing and MySQL. It was built as an academic laboratory activity (Activity 4) to demonstrate core Object-Oriented Programming (OOP) concepts, graphical user interface (GUI) design, and database integration. 
 
-## Project Structure
-* **Java Source Code:** Contains the GUI classes (`StudentFrame`, `CourseFrame`, `EnrollmentFrame`) and the database connection logic.
-* **Database File:** `activity4_enrollment_db.sql` - The exported MySQL database containing the table structures and relationships.
-* **ERD Diagram:** `ERD_Diagram.png` - Visual map of the database tables and their One-to-Many relationships.
+The application allows users to perform full CRUD (Create, Read, Update, Delete) operations across multiple database tables.
 
-## How to Set Up the MySQL Database
-1. Open your MySQL management tool
+## Key Features
+* **Modular GUI Design:** Separate JFrame modules for managing Courses and Enrollments.
+* **Centralized Database Architecture:** Utilizes the **Singleton Design Pattern** for the database connection (`DBconnection.java`), significantly improving memory efficiency and performance by preventing redundant MySQL logins.
+* **Enhanced Security:** Implements `PreparedStatement` across all SQL queries to effectively prevent SQL Injection attacks.
+* **Data Transformation:** Features robust date parsing using `SimpleDateFormat`, seamlessly converting user-friendly date inputs (MM-DD-YYYY) into strict MySQL database formats (YYYY-MM-DD).
+* **Dynamic Data Rendering:** Uses `DefaultTableModel` to instantly reflect database changes on the UI without requiring an application restart.
+
+## Technologies Used
+* **Language:** Java (JDK 8+)
+* **GUI Framework:** Java Swing (AWT / Javax)
+* **Database:** MySQL Server
+* **Connectivity:** JDBC (Java Database Connectivity) Driver
+
+## Setup and Installation
+
+### 1. Database Configuration
+1. Open your MySQL client (e.g., MySQL Workbench, XAMPP/phpMyAdmin).
 2. Create a new database named `activity4_enrollment_db`.
-3. Import the provided `activity4_enrollment_db.sql` file into this new database to automatically build the `Student`, `Course`, and `Enrolled Subject` tables.
+3. Create the required tables: `course` and `enrolled subject` (ensure you have matching columns for IDs, names, descriptions, and dates).
 
-## Dependencies Required
-* **Java Development Kit (JDK):** Version 8 or higher.
-* **MySQL Database:** To host the local server.
-* **MySQL JDBC Driver:** `mysql-connector-j` (Required to connect the Java application to the MySQL database).
-
-## How to Run the Application
-1. Clone or download this repository to your local machine.
-2. Open the project in your Java IDE (e.g., Apache NetBeans).
-3. Ensure the MySQL JDBC Driver is added to your project's Libraries.
-4. Run your local MySQL server (via XAMPP or MySQL Workbench).
-5. Run the main Java file to launch the application GUI.
+### 2. Application Configuration
+1. Clone this repository to your local machine.
+2. Open the project in your preferred IDE (NetBeans, Eclipse, or IntelliJ).
+3. Ensure the **MySQL JDBC Driver** (e.g., `mysql-connector-java.jar`) is added to your project's Libraries/Build Path.
+4. Open the `DBconnection.java` (or respective frames) and update the database credentials to match your local MySQL setup:
+   ```java
+   // Example:
+   "jdbc:mysql://localhost:3306/activity4_enrollment_db", "root", "YOUR_LOCAL_PASSWORD"
 
 ## ERD
 <img width="621" height="299" alt="ERD_Diagram drawio" src="https://github.com/user-attachments/assets/9662a97d-9e87-40b0-8bf3-d8e048084482" />
