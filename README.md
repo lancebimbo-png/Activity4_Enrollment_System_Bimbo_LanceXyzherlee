@@ -21,7 +21,7 @@ The application allows users to perform full CRUD (Create, Read, Update, Delete)
 ## Setup and Installation
 
 ### 1. Database Configuration
-1. Open your MySQL client (e.g., MySQL Workbench, XAMPP/phpMyAdmin).
+1. Open your MySQL client 
 2. Create a new database named `activity4_enrollment_db`.
 3. Create the required tables: `course` and `enrolled subject` (ensure you have matching columns for IDs, names, descriptions, and dates).
 
